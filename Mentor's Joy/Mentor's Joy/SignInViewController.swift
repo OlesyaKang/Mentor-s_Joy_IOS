@@ -212,6 +212,7 @@ class SignInViewController: UIViewController {
             self.regButton.backgroundColor = UIColor(red: 62/255, green: 103/255, blue: 182/255, alpha: 1)
         })
         UIView.animate(withDuration: 0.1, animations: {
+            self.errorText.isHidden = true
             self.startLabel.text = "Регистрация"
             self.startLabel.pinTop(to: self.view.topAnchor, 135)
             self.authorization.isHidden = true
