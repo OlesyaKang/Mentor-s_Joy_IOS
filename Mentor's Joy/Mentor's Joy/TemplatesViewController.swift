@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SwiftUI
 
 final class TemplatesViewComtroller: UIViewController {
         
@@ -467,9 +466,7 @@ final class TemplatesViewComtroller: UIViewController {
         }
         task.resume()
     }
-    
-    @State private var exportFile = false
-    
+        
     private func downloadFile() {
         var request = URLRequest(url: URL(string: "http://158.160.13.158:8081/api/app/technical_assignment/get-file/\(templatesArray[ind].id!)")!)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
